@@ -72,6 +72,9 @@ else if( computerMove == 'nożyce' && playerMove == 'nożyce'){
 else if( computerMove == 'nożyce' && playerMove == 'kamień'){
 	printMessage('Wygrales!');
 }
-else {
-	printMessage('Przegrales!')
+else if( computerMove == 'nożyce' && playerMove == 'papier') {
+	printMessage('Przegrales!');
+}
+else{
+	printMessage('Nieznany ruch');
 }
