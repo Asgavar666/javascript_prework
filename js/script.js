@@ -8,6 +8,7 @@ function printMessage(msg){
 function clearMessages(){
 	document.getElementById('messages').innerHTML = '';
 }
+function playGame(){
 let playerInput = prompt('Wybierz swój ruch! 1: kamień, 2: papier, 3: nożyce.');
 
 console.log('Gracz wpisał: ' + playerInput);
@@ -62,10 +63,18 @@ function displayResult(argComputerMove, argPlayerMove){
 		return;
 	}
 	else if(argComputerMove == 'kamień' && argPlayerMove == 'nożyce'){
-		printMessage('PRzegrałeś!');
+		printMessage('Przegrałeś!');
 		return;
 	}
 	else if(argComputerMove == 'kamień' && argPlayerMove == 'papier'){
+		printMessage('Wygrałeś!');
+		return;
+	}
+	else if(argComputerMove == 'nożyce' && argPlayerMove == 'papier'){
+		printMessage('Przegrałeś!');
+		return;
+	}
+	else if(argComputerMove == 'nożyce' && argPlayerMove == 'kamień'){
 		printMessage('Wygrałeś!');
 		return;
 	}
@@ -78,6 +87,8 @@ function displayResult(argComputerMove, argPlayerMove){
 }
 
 displayResult(computerMove, playerMove);
+}
+playGame(3);
 /*
 if(computerMove == 'papier' && playerMove == 'papier'){
 	printMessage('remis!');
