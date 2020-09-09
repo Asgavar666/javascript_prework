@@ -42,35 +42,21 @@ let playerInput = prompt('Wybierz swój ruch! 1: kamień, 2: papier, 3: nożyce.
 
 	function displayResult(argComputerMove, argPlayerMove){
 		printMessage('Zagralem ' + argComputerMove + ' a Ty ' + argPlayerMove);
-		if(argComputerMove == 'papier' && argPlayerMove == 'papier'){
+		if(argComputerMove === argPlayerMove){
 			printMessage('remis!');
 			
 		}
-		else if(argComputerMove == 'kamień' && argPlayerMove == 'kamień'){
-			printMessage('remis!');
+		
 			
-		}
-		else if(argComputerMove == 'nożyce' && argPlayerMove == 'nożyce'){
-			printMessage('remis!');
-		}
-		else if(argComputerMove == 'papier' && argPlayerMove == 'kamień'){
-			printMessage('Przegrałeś!');
-			
-		}
+		
 		else if(argComputerMove == 'papier' && argPlayerMove == 'nożyce'){
 			printMessage('Wygrałeś!');
 			
 		}
-		else if(argComputerMove == 'kamień' && argPlayerMove == 'nożyce'){
-			printMessage('Przegrałeś!');
-			
-		}
+		
+		
 		else if(argComputerMove == 'kamień' && argPlayerMove == 'papier'){
 			printMessage('Wygrałeś!');
-			
-		}
-		else if(argComputerMove == 'nożyce' && argPlayerMove == 'papier'){
-			printMessage('Przegrałeś!');
 			
 		}
 		else if(argComputerMove == 'nożyce' && argPlayerMove == 'kamień'){
@@ -78,7 +64,7 @@ let playerInput = prompt('Wybierz swój ruch! 1: kamień, 2: papier, 3: nożyce.
 			
 		}
 		else {
-			printMessage('error!');
+			printMessage('Przegrales!');
 			
 		}
 
