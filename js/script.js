@@ -1,18 +1,18 @@
-function printMessage(msg){
+{
+const printMessage = function(msg){
 	let div = document.createElement('div');
 	div.innerHTML = msg;
 	document.getElementById('messages').appendChild(div);
 	
 }
 
-function clearMessages(){
+const clearMessages = function(){
 	document.getElementById('messages').innerHTML = '';
 }
 function playGame(playerInput){
-/*
-let playerInput = prompt('Wybierz swój ruch! 1: kamień, 2: papier, 3: nożyce.');
-*/	clearMessages();
-	console.log('Gracz wpisał: ' + playerInput);
+
+	clearMessages();
+	
 
 	function getMoveName(argMoveId){
 		if(argMoveId == 1){
@@ -83,3 +83,4 @@ document.getElementById('play-paper').addEventListener('click', function(){
 document.getElementById('play-scissors').addEventListener('click', function(){
 	playGame(3);
 });
+}
